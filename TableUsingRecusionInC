@@ -1,0 +1,26 @@
+/*================= Author -: MOHD UMAR(MASTER-TECH786 OR MASTER-TECH271 OR MASTER-TECH OR umar17605) ===============================*/
+/*============ This code is originally written by MOHD UMAR =========================================================================*/
+#include<stdio.h>
+#include<conio.h>
+void table_generate(int, int, int);
+int main() {
+ int a, b, c;
+ clrscr();
+ printf("\n\n\tThis code is originally written by MOHD UMAR\n\n");
+ printf("Enter the table Number = ");//table number which you want
+ scanf("%d", &a);
+ printf("Enter the table Number upto = ");//table upto
+ scanf("%d", &b);
+ c = b;
+ table_generate(a, b, c);
+ return 0;
+}
+void table_generate(int a, int b, int c) {
+ if(b==0) {
+  getch();
+ }
+ else {
+  printf("%d * %d = %d \n", a, ((c-b)+1), (a*((c-b)+1)));
+  table_generate(a, b-1, c);
+ }
+}
